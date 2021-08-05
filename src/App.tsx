@@ -1,5 +1,5 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import AttendEventPage from "./Pages/AttendEventPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 
