@@ -1,7 +1,7 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.scss";
-import AttendEventPage from "./Pages/AttendEventPage";
-import NotFoundPage from "./Pages/NotFoundPage";
+import AttendEventPage from "./Pages/AttendEvent/AttendEventPage";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 const App = () => (
   <div className="App">

@@ -2,8 +2,19 @@ $mobile: 600px;
 
 @media (max-width: $mobile) {
   .App {
-    text-align: center;
+    text-align: left;
     display: flex;
     justify-content: center;
   }
+}
+
+.rectangle {
+  width: 280px;
+  height: 1px;
+  background: #d1d1d1;
+}
+
+.flex-space-inbetween {
+  display: flex;
+  justify-content: space-between;
 }
