@@ -34,9 +34,16 @@ export const AttendEventForm = () => {
         label="Choose a day"
         min="2019-08-5"
         max="2019-09-13"
+        datesTaken={["2019-08-07", "2019-08-20", "2019-09-01"]}
         onChange={onChange}
       />
-
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <pre>{JSON.stringify(formValues, null, 2)}</pre>
     </form>
   );
