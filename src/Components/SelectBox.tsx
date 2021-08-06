@@ -35,8 +35,10 @@ const SelectBox = ({
         required={!optional}
       >
         {!hasClicked && <option selected value=""></option>}
-        {options.map((choice) => (
-          <option value={choice}>{choice}</option>
+        {options.map((choice, index) => (
+          <option key={index} value={choice}>
+            {choice}
+          </option>
         ))}
       </select>
     </div>

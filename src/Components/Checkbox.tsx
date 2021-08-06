@@ -19,7 +19,7 @@ const CheckBox = ({
         type="checkbox"
         id={name}
         name={name}
-        required={!optional}
+        required={optional}
         onChange={onChange}
       />
       <label htmlFor={name}>{label}</label>
