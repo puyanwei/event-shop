@@ -3,17 +3,17 @@ import { ChangeEventHandler } from "react";
 interface TextBoxProps {
   name: string;
   label: string;
-  onChange: ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   optional?: boolean;
+  onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
 const TextBox = ({
   name,
   label,
-  onChange,
   placeholder = "",
   optional = false,
+  onChange,
 }: TextBoxProps) => {
   return (
     <div>

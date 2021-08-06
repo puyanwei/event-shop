@@ -20,7 +20,7 @@ const DatePicker = ({
   const [isDuplicateDate, setIsDuplicateDate] = useState<boolean>(false);
   const errorMessage = `Sorry, but the date you have selected is unavailable. Please select another.`;
 
-  const checkDateAvailability = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target as HTMLInputElement;
 
     if (datesTaken && datesTaken.some((date) => date === value)) {
@@ -41,10 +41,10 @@ const DatePicker = ({
           name={name}
           min={min}
           max={max}
-          onChange={checkDateAvailability}
+          onChange={onChangeHandler}
         />
       </div>
-      {isDuplicateDate && errorMessage}
+      {isDuplicateDate && <span className="errorMessage">{errorMessage}</span>}
     </div>
   );
 };
