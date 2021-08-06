@@ -1,0 +1,16 @@
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  input[type="checkbox"] {
+    margin: 0 10px 0 0;
+    width: 20px;
+  }
+  .checkbox-label {
+    height: 23px;
+    font-family: "Roboto Condensed";
+    font-size: 16px;
+    font-weight: 100;
+    text-transform: none;
+    line-height: 25px;
+  }
+}

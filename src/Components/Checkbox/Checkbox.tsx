@@ -1,4 +1,5 @@
 import { ChangeEventHandler } from "react";
+import "./Checkbox.scss";
 
 interface CheckBoxProps {
   name: string;
@@ -14,7 +15,7 @@ const CheckBox = ({
   onChange,
 }: CheckBoxProps) => {
   return (
-    <div className="margin-md">
+    <div className="checkbox-container margin-md">
       <input
         type="checkbox"
         id={name}
@@ -22,7 +23,9 @@ const CheckBox = ({
         required={optional}
         onChange={onChange}
       />
-      <label htmlFor={name}>{label}</label>
+      <label className="checkbox-label" htmlFor={name}>
+        {label}
+      </label>
     </div>
   );
 };
