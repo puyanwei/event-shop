@@ -1,8 +1,8 @@
 import { ChangeEvent, useState } from "react";
-import CheckBox from "../../../Components/Checkbox";
-import DatePicker from "../../../Components/DatePicker";
-import SelectBox from "../../../Components/SelectBox";
-import TextBox from "../../../Components/TextBox";
+import CheckBox from "Components/Checkbox";
+import DatePicker from "Components/DatePicker";
+import SelectBox from "Components/SelectBox";
+import TextBox from "Components/TextBox";
 
 interface AttendEventFormData {
   firstName: string;
@@ -15,18 +15,23 @@ interface AttendEventFormData {
   needsWheelchairAccess: boolean;
 }
 
+const defaultFormValues = {
+  firstName: "",
+  familyName: "",
+  eventDate: "",
+  numberOfAttendees: 0,
+  companyName: "",
+  email: "",
+  telephone: "",
+  needsWheelchairAccess: false,
+};
+
 export const AttendEventForm = () => {
-  const [formValues, setFormValues] = useState<AttendEventFormData>({
-    firstName: "",
-    familyName: "",
-    eventDate: "",
-    numberOfAttendees: 0,
-    companyName: "",
-    email: "",
-    telephone: "",
-    needsWheelchairAccess: false,
-  });
+  const [formValues, setFormValues] =
+    useState<AttendEventFormData>(defaultFormValues);
   const [price, setPrice] = useState<number>(0);
+  const [formSubmissionSuccessMessage, setFormSubmissionSuccessMessage] =
+    useState<string>("");
 
   const textBoxHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target as HTMLInputElement;
@@ -71,7 +76,11 @@ export const AttendEventForm = () => {
     fetch("https://www.mocky.io/v2/5d00cfff3200007d00f9d809", options)
       .then((response) => response.json())
       .then((data) => {
-        console.log("data", data);
+        console.log(`data`, data);
+        setFormSubmissionSuccessMessage(
+          "Event successfully booked. Please check your your confirmation email."
+        );
+        setFormValues(defaultFormValues);
       })
       .catch((error) => console.log(error));
   };
@@ -143,10 +152,7 @@ export const AttendEventForm = () => {
         </div>
       )}
       <br />
-      <br />
-      <br />
-      <br />
-      <pre>{JSON.stringify(formValues, null, 2)}</pre>
+      <div>{formSubmissionSuccessMessage}</div>
     </form>
   );
 };
