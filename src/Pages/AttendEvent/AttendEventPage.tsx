@@ -1,4 +1,4 @@
-import { AttendEventForm } from "../../Components/AttendEventForm";
+import { AttendEventForm } from "./AttendEventForm/AttendEventForm";
 import "./AttendEvent.scss";
 
 const AttendEventPage = () => {
