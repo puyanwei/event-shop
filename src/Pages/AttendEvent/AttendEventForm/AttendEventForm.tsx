@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import DatePicker from "../../../Components/DatePicker";
 import TextBox from "../../../Components/TextBox";
 
@@ -15,7 +15,7 @@ export const AttendEventForm = () => {
     eventDate: new Date(),
   });
 
-  const onChange = (e: FormEvent<EventTarget>) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target as HTMLInputElement;
     setFormValues({ ...formValues, [name]: value });
   };
@@ -34,9 +34,16 @@ export const AttendEventForm = () => {
         label="Choose a day"
         min="2019-08-5"
         max="2019-09-13"
+        datesTaken={["2019-08-07", "2019-08-20", "2019-09-01"]}
         onChange={onChange}
       />
-
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <pre>{JSON.stringify(formValues, null, 2)}</pre>
     </form>
   );
