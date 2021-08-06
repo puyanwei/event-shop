@@ -59,8 +59,21 @@ export const AttendEventForm = () => {
       formValues.email
   );
 
-  const handleSubmit = () => {
-    console.log(`formValues`, formValues);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ formValues }),
+    };
+    fetch("https://www.mocky.io/v2/5d00cfff3200007d00f9d809", options)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("data", data);
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
