@@ -5,7 +5,7 @@ const AttendEventPage = () => {
   return (
     <div className="stadionFET">
       <main>
-        <header className="formtitle">Attend Event</header>
+        <h1 className="formtitle">Attend Event</h1>
         <section className="discountin">
           <h4>Early bird offer</h4>
           <p>

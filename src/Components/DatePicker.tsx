@@ -1,32 +1,35 @@
 import { ChangeEventHandler } from "react";
 
-interface InputBoxProps {
+interface DatePickerProps {
   name: string;
   label: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
-  placeholder?: string;
+  min?: string;
+  max?: string;
 }
 
-const InputBox = ({
+const DatePicker = ({
   name,
   label,
   onChange,
-  placeholder = "",
-}: InputBoxProps) => {
+  min = "",
+  max = "",
+}: DatePickerProps) => {
   return (
     <div>
       <label htmlFor={name}>{label}</label>
       <div>
         <input
-          type="text"
+          type="date"
           id={name}
           name={name}
+          min={min}
+          max={max}
           onChange={onChange}
-          placeholder={placeholder}
         />
       </div>
     </div>
   );
 };
 
-export default InputBox;
+export default DatePicker;

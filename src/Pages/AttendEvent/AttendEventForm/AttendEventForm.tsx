@@ -1,13 +1,18 @@
 import { FormEvent, useState } from "react";
-import InputBox from "../../../Components/InputBox";
+import DatePicker from "../../../Components/DatePicker";
+import TextBox from "../../../Components/TextBox";
 
 interface AttendEventFormData {
   firstName: string;
+  familyName: string;
+  eventDate: Date;
 }
 
 export const AttendEventForm = () => {
   const [formValues, setFormValues] = useState<AttendEventFormData>({
     firstName: "",
+    familyName: "",
+    eventDate: new Date(),
   });
 
   const onChange = (e: FormEvent<EventTarget>) => {
@@ -17,12 +22,21 @@ export const AttendEventForm = () => {
 
   return (
     <form>
-      <InputBox
+      <TextBox
         name="firstName"
         label="First Name"
         placeholder="e.g. Brian"
         onChange={onChange}
       />
+      <TextBox name="familyName" label="Family Name" onChange={onChange} />
+      <DatePicker
+        name="eventDate"
+        label="Choose a day"
+        min="2019-08-5"
+        max="2019-09-13"
+        onChange={onChange}
+      />
+
       <pre>{JSON.stringify(formValues, null, 2)}</pre>
     </form>
   );
