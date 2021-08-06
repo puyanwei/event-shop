@@ -1,4 +1,5 @@
 import { ChangeEvent, ChangeEventHandler, useState } from "react";
+import "./SelectBox.scss";
 
 interface SelectBoxProps {
   name: string;
@@ -25,7 +26,7 @@ const SelectBox = ({
 
   return (
     <div className="margin-md">
-      <div>
+      <div className="margin-md">
         <label htmlFor={name}>{label}</label>
       </div>
       <select
@@ -41,6 +42,7 @@ const SelectBox = ({
           </option>
         ))}
       </select>
+      <div className="rectangle margin-sm"></div>
     </div>
   );
 };

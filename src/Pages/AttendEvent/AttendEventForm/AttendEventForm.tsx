@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import CheckBox from "Components/Checkbox";
 import DatePicker from "Components/DatePicker/DatePicker";
-import SelectBox from "Components/SelectBox";
+import SelectBox from "Components/SelectBox/SelectBox";
 import TextBox from "Components/TextBox/TextBox";
 import "./AttendEventForm.scss";
 interface AttendEventFormData {

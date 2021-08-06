@@ -33,7 +33,7 @@ const DatePicker = ({
   };
 
   return (
-    <div className="margin-md">
+    <div className="margin-sm">
       <label htmlFor={name}>{label}</label>
       <div className="margin-md">
         <input
