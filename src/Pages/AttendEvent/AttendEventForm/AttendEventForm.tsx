@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from "react";
+import CheckBox from "../../../Components/Checkbox";
 import DatePicker from "../../../Components/DatePicker";
 import SelectBox from "../../../Components/SelectBox";
 import TextBox from "../../../Components/TextBox";
@@ -8,6 +9,9 @@ interface AttendEventFormData {
   familyName: string;
   eventDate: Date;
   numberOfAttendees: number;
+  companyName: string;
+  telephone: string;
+  needsWheelchairAccess: boolean;
 }
 
 export const AttendEventForm = () => {
@@ -16,6 +20,9 @@ export const AttendEventForm = () => {
     familyName: "",
     eventDate: new Date(),
     numberOfAttendees: 0,
+    companyName: "",
+    telephone: "",
+    needsWheelchairAccess: false,
   });
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -26,6 +33,11 @@ export const AttendEventForm = () => {
   const onChangeSelect = (e: ChangeEvent<HTMLSelectElement>) => {
     const { value, name } = e.target as HTMLSelectElement;
     setFormValues({ ...formValues, [name]: value });
+  };
+
+  const onChangeChecked = (e: ChangeEvent<HTMLInputElement>) => {
+    const { checked, name } = e.target as HTMLInputElement;
+    setFormValues({ ...formValues, [name]: checked });
   };
 
   return (
@@ -48,8 +60,28 @@ export const AttendEventForm = () => {
       <SelectBox
         name="numberOfAttendees"
         label={"Number of attendees"}
-        onChange={onChangeSelect}
         options={["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]}
+        onChange={onChangeSelect}
+      />
+      <TextBox
+        name="companyName"
+        label="Company Name"
+        placeholder="e.g. Stadion"
+        optional
+        onChange={onChange}
+      />
+      <TextBox name="email" label="Email" type="email" onChange={onChange} />
+      <TextBox
+        name="telephone"
+        label="Telephone"
+        type="tel"
+        optional
+        onChange={onChange}
+      />
+      <CheckBox
+        name="needsWheelchairAccess"
+        label="Do you need wheelchair access?"
+        onChange={onChangeChecked}
       />
       <br />
       <br />
