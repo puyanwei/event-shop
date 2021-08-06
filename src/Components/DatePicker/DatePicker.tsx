@@ -1,4 +1,5 @@
 import { ChangeEvent, ChangeEventHandler, useState } from "react";
+import "./DatePicker.scss";
 
 interface DatePickerProps {
   name: string;
@@ -32,9 +33,9 @@ const DatePicker = ({
   };
 
   return (
-    <div>
+    <div className="margin-md">
       <label htmlFor={name}>{label}</label>
-      <div>
+      <div className="margin-md">
         <input
           type="date"
           id={name}

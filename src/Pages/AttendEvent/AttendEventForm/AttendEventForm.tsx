@@ -1,9 +1,9 @@
 import { ChangeEvent, useState } from "react";
 import CheckBox from "Components/Checkbox";
-import DatePicker from "Components/DatePicker";
+import DatePicker from "Components/DatePicker/DatePicker";
 import SelectBox from "Components/SelectBox";
-import TextBox from "Components/TextBox";
-
+import TextBox from "Components/TextBox/TextBox";
+import "./AttendEventForm.scss";
 interface AttendEventFormData {
   firstName: string;
   familyName: string;

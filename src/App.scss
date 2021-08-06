@@ -8,13 +8,33 @@ $mobile: 600px;
   }
 }
 
-.rectangle {
-  width: 280px;
-  height: 1px;
-  background: #d1d1d1;
+.margin-sm {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.margin-md {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.margin-lg {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.margin-xlg {
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 .flex-space-inbetween {
   display: flex;
   justify-content: space-between;
+}
+
+.rectangle {
+  width: 280px;
+  height: 1px;
+  background: #d1d1d1;
 }

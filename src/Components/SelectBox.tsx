@@ -24,7 +24,7 @@ const SelectBox = ({
   };
 
   return (
-    <div>
+    <div className="margin-md">
       <div>
         <label htmlFor={name}>{label}</label>
       </div>

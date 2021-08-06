@@ -15,22 +15,23 @@ const AttendEventPage = () => {
         </section>
         <section className="pricetable">
           <h4>Price per attendee</h4>
-          <div className="flex-space-inbetween">
+          <div className="flex-space-inbetween margin-sm">
             <span>1-3</span>
             <span>£50</span>
           </div>
           <div className="rectangle" />
-          <div className="flex-space-inbetween">
+          <div className="flex-space-inbetween margin-sm">
             <span>4-6</span>
             <span>£40</span>
           </div>
           <div className="rectangle" />
-          <div className="flex-space-inbetween">
+          <div className="flex-space-inbetween margin-sm">
             <span>6+</span>
             <span>£35</span>
           </div>
           <div className="rectangle" />
         </section>
+        <div className="margin-lg" />
       </main>
       <AttendEventForm />
     </div>

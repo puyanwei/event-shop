@@ -14,7 +14,7 @@ const CheckBox = ({
   onChange,
 }: CheckBoxProps) => {
   return (
-    <div>
+    <div className="margin-md">
       <input
         type="checkbox"
         id={name}
