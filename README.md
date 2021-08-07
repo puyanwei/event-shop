@@ -1,8 +1,10 @@
 # Event Shop
 
-<img src="https://user-images.githubusercontent.com/14803518/128614065-2a5bfb02-1c49-42c6-876e-79eada043c61.png" width="250">
+|     |     |
+| :-: | :-: |
 
-<img src="https://user-images.githubusercontent.com/14803518/128614168-ef18ae6f-b2ae-4491-a65f-9796a23539e5.png" width="250">
+<img src="https://user-images.githubusercontent.com/14803518/128614065-2a5bfb02-1c49-42c6-876e-79eada043c61.png" width="250">
+  |  <img src="https://user-images.githubusercontent.com/14803518/128614168-ef18ae6f-b2ae-4491-a65f-9796a23539e5.png" width="250">
 
 This app allows a user to book an event between the dates of 5th August 2019 and 13th September 2019, excluding the days of August, 20 August and 1 September.
 
