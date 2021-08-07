@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Event Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://user-images.githubusercontent.com/14803518/128614065-2a5bfb02-1c49-42c6-876e-79eada043c61.png" width="250">
 
-## Available Scripts
+<img src="https://user-images.githubusercontent.com/14803518/128614168-ef18ae6f-b2ae-4491-a65f-9796a23539e5.png" width="250">
 
-In the project directory, you can run:
+This app allows a user to book an event between the dates of 5th August 2019 and 13th September 2019, excluding the days of August, 20 August and 1 September.
 
-### `npm start`
+<img src="https://user-images.githubusercontent.com/14803518/128614207-6bc23f3a-6fef-4d42-ba23-71f3b3cb7915.png" width="250">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+After filling out the compulsary fields a price summary will reveal itself and will show the total price of the event, and a buy button.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+After clicking buy it will send the form data to a mock api and another success message will show to let the user know of the successful transaction.
 
-### `npm test`
+<img src="https://user-images.githubusercontent.com/14803518/128614270-e261cb82-a1ed-4486-a5ee-1ea74e930ba0.png" width="250">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app is only of mobile size for now, but is able to expand to larger sizes later on.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/puyanwei/event-shop.git
+cd event-shop
+npm install
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React functional components ES6
+- Typescript
+- SCSS
 
-### `npm run eject`
+## Planning
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I approached this task by spending some time to plan out the details and the best ordering to do things in.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/14803518/128614054-38c17e83-bb33-43a9-8780-aa1b85411fcd.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Decisions would need to be made about how to split up the page, and how to componentise the app in a way which made sense. Drawing things down helps a lot to break down the problem.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Much thought was also considered on the folder structure for scalability, but making sure to keep a balance for doing only what makes sense now, with the flexibility of being able to expand it later if needs be.
 
-## Learn More
+## Sketch Issues
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Once this was completed, I wanted to look at the Sketch file provided for the designs. I have used Sketch before and I really love the css conversion in the program, it allows the designer and developer to work in tandum accurately.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Unfortunately my Macbook Air (2011) is too old to download the program, and there seemed to be no way of uploading the file to their web app. As an alternative, I managed to find a Windows program called [Lunacy](https://icons8.com/lunacy) which seemed to do the job.
+
+![image](https://user-images.githubusercontent.com/14803518/128614299-c77b895e-06fd-4ba3-8e03-737749bcfc10.png))
+
+I could be using it incorrectly, but it seems to have a few issues;
+
+- All auto generated CSS seemed to be put into ids rather then classes
+- Auto generated CSS seemed to repeat itself and so there is much overlapping
+- Spacing of elements seems to be difficult if not no way of knowing accurately how far away items are from each other
+
+## Hurdles
+
+Some of the things I found tougher then expected;
+
+- Wrestling with Typescript in getting the correct event types
+- Trying to find out what are the best practices
+- Dealing the dates, namely trying to have a date comparison to validate that field is not the default value so that the Price Summary section can show. In the end just had it has a string type over a date type.
+- Messy CSS, following Lunacy seems to repeat a lot of the properties over and over but copied it anyways. Not too familiar with best practices for scss in terms of file structure.
+
+## Future Improvements?
+
+- Add [Formik](https://formik.org/) for the form data validation. Since this was not needed I decided not to use it.
+- A more formal reusable css library, or possibly expanding that out into using Storybook to create a design system.
+- Testing, possibily with something like Cypress
+
+## Feedback!
+
+I look forward to the feedback and will add them here afterwards of what was said to improve.
