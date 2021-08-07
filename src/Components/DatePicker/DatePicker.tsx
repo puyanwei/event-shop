@@ -45,7 +45,7 @@ const DatePicker = ({
           onChange={onChangeHandler}
         />
       </div>
-      {isDuplicateDate && <span className="errorMessage">{errorMessage}</span>}
+      {isDuplicateDate && <span className="error-message">{errorMessage}</span>}
     </div>
   );
 };

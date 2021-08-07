@@ -141,18 +141,22 @@ export const AttendEventForm = () => {
       <br />
       <br />
       {showPriceSummary && (
-        <div>
-          <div className="rectangle" />
+        <div className="price-summary">
+          <div className="rectangle margin-lg" />
           <div className="flex-space-inbetween">
-            <span>Attendees</span>
-            <span>{formValues.numberOfAttendees}</span>
+            <span className="price-summary-category">Attendees</span>
+            <span className="price-summary-result">
+              {formValues.numberOfAttendees}
+            </span>
           </div>
-          <div>{price}</div>
-          <button type="submit">Buy</button>
+          <div className="price margin-lg">£{price}</div>
+          <button className="submit-button" type="submit">
+            Buy
+          </button>
         </div>
       )}
       <br />
-      <div>{formSubmissionSuccessMessage}</div>
+      <div className="success-message">{formSubmissionSuccessMessage}</div>
     </form>
   );
 };
