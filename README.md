@@ -35,7 +35,7 @@ npm start
 
 I approached this task by spending some time to plan out the details and the best ordering to do things in.
 
-![image](https://user-images.githubusercontent.com/14803518/128614054-38c17e83-bb33-43a9-8780-aa1b85411fcd.png)
+<img src="https://user-images.githubusercontent.com/14803518/128614054-38c17e83-bb33-43a9-8780-aa1b85411fcd.png" width="500">
 
 Decisions would need to be made about how to split up the page, and how to componentise the app in a way which made sense. Drawing things down helps a lot to break down the problem.
 
@@ -47,7 +47,7 @@ Once this was completed, I wanted to look at the Sketch file provided for the de
 
 Unfortunately my Macbook Air (2011) is too old to download the program, and there seemed to be no way of uploading the file to their web app. As an alternative, I managed to find a Windows program called [Lunacy](https://icons8.com/lunacy) which seemed to do the job.
 
-![image](https://user-images.githubusercontent.com/14803518/128614299-c77b895e-06fd-4ba3-8e03-737749bcfc10.png))
+<img src="https://user-images.githubusercontent.com/14803518/128614299-c77b895e-06fd-4ba3-8e03-737749bcfc10.png" width="100%">
 
 I could be using it incorrectly, but it seems to have a few issues;
 
