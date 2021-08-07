@@ -4,6 +4,7 @@ import DatePicker from "Components/DatePicker/DatePicker";
 import SelectBox from "Components/SelectBox/SelectBox";
 import TextBox from "Components/TextBox/TextBox";
 import "./AttendEventForm.scss";
+
 interface AttendEventFormData {
   firstName: string;
   familyName: string;

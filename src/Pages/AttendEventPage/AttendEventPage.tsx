@@ -1,5 +1,5 @@
 import { AttendEventForm } from "./AttendEventForm/AttendEventForm";
-import "./AttendEvent.scss";
+import "./AttendEventPage.scss";
 
 const AttendEventPage = () => {
   return (
