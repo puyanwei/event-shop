@@ -23,6 +23,12 @@ npm install
 npm start
 ```
 
+Then as the app is loading in the terminal, use your own "On Your Network" url and copy that to your phone to preview the app.
+
+<img src="https://user-images.githubusercontent.com/14803518/128638557-58b4d322-759b-431d-b30a-9e255def4d15.png" width="250">
+
+The app that loads in the browser will require the browser size to be resized to a mobile size for the app to show correcly.
+
 ## Tech Stack
 
 - React functional components ES6
