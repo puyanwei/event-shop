@@ -138,23 +138,22 @@ export const AttendEventForm = () => {
         label="Do you need wheelchair access?"
         onChange={checkboxHandler}
       />
-      <br />
-      <br />
-      <br />
       {showPriceSummary && (
-        <div className="price-summary">
-          <div className="rectangle margin-lg" />
-          <div className="flex-space-inbetween">
-            <span className="price-summary-category">Attendees</span>
-            <span className="price-summary-result">
-              {formValues.numberOfAttendees}
-            </span>
+        <>
+          <div className="rectangle margin-xlg" />
+          <div className="price-summary margin-lg">
+            <div className="flex-space-inbetween">
+              <span className="price-summary-category">Attendees</span>
+              <span className="price-summary-result">
+                {formValues.numberOfAttendees}
+              </span>
+            </div>
+            <div className="price margin-lg">£{price}</div>
+            <button className="submit-button" type="submit">
+              Buy
+            </button>
           </div>
-          <div className="price margin-lg">£{price}</div>
-          <button className="submit-button" type="submit">
-            Buy
-          </button>
-        </div>
+        </>
       )}
       <br />
       <div className="success-message">{formSubmissionSuccessMessage}</div>

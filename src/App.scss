@@ -1,11 +1,8 @@
-$mobile: 600px;
-
-@media (max-width: $mobile) {
-  .App {
-    text-align: left;
-    display: flex;
-    justify-content: center;
-  }
+.App {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .margin-sm {
