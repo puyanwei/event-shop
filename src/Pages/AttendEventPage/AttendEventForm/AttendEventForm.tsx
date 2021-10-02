@@ -87,7 +87,7 @@ export const AttendEventForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="attend-event-form">
       <TextBox
         name="firstName"
         label="First Name"

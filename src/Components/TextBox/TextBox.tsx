@@ -23,7 +23,7 @@ const TextBox = ({
       <label htmlFor={name}>{label}</label>
       {optional && <span className="optional">OPTIONAL</span>}
     </div>
-    <div>
+    <div className="input-container">
       <input
         type={type}
         id={name}

@@ -74,4 +74,8 @@ Some of the things I found tougher then expected;
 
 ## Feedback!
 
-I look forward to the feedback and will add them here afterwards of what was said to improve.
+The following feedback was recieved and corrected afterwards;
+
+- Common sense should have been used in using the Lunacy results for the css, height should not have been used. Just like ids, this was not used so blindly copying the css was a mistake.
+- Careful in using css inside components that are not custom classes, they will still activate and be used in all locations. Example being the `label` or `input` css. You can use a custom class or create a custom class container outside of it using scss to target it instead.
+- Minimise repeating css.
